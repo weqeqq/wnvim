@@ -1,10 +1,12 @@
 { helpers, lib, ... }:
-with lib;
+let
+  readOnly = lib.mkOption { readOnly = true; };
+in
 {
   options.lib.plugins.lsp = {
-    mkKeymap = mkOption { };
-    mkExtraKeymap = mkOption { };
-    mkTelescopeKeymap = mkOption { };
+    mkKeymap = readOnly;
+    mkExtraKeymap = readOnly;
+    mkTelescopeKeymap = readOnly;
   };
 
   config = {

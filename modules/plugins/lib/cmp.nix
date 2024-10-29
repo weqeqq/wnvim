@@ -1,10 +1,13 @@
 { helpers, lib, ... }:
+let
+  readOnly = lib.mkOption { readOnly = true; };
+in
 {
   options.lib.plugins.cmp = {
-    mkSnippet = lib.mkOption { };
-    mkMapping = lib.mkOption { };
-    mkComparator = lib.mkOption { };
-    mkCustomMapping = lib.mkOption { };
+    mkSnippet = readOnly;
+    mkMapping = readOnly;
+    mkComparator = readOnly;
+    mkCustomMapping = readOnly;
   };
 
   config.lib.plugins.cmp = {

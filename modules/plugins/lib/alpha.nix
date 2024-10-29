@@ -1,11 +1,13 @@
 { helpers, lib, ... }:
-with lib;
+let
+  readOnly = lib.mkOption { readOnly = true; };
+in
 {
   options.lib.plugins.alpha = {
-    mkPadding = mkOption { };
-    mkText = mkOption { };
-    mkGroup = mkOption { };
-    mkButton = mkOption { };
+    mkPadding = readOnly;
+    mkText = readOnly;
+    mkGroup = readOnly;
+    mkButton = readOnly;
   };
 
   config = {
