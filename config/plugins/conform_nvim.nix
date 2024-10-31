@@ -8,7 +8,7 @@
         cpp = [ "clang_format" ];
         nix = [ "nixfmt" ];
         json = [ "fixjson" ];
-        js = [ "prettier" ];
+        javascript = [ "prettier" ];
         "_" = [
           "squeeze_blanks"
           "trim_whitespace"
