@@ -31,6 +31,7 @@ in
       clangd.enable = true;
       cmake.enable = true;
       dartls.enable = true;
+      ts_ls.enable = true;
     };
   };
 }

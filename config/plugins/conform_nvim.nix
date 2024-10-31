@@ -8,6 +8,7 @@
         cpp = [ "clang_format" ];
         nix = [ "nixfmt" ];
         json = [ "fixjson" ];
+        js = [ "prettier" ];
         "_" = [
           "squeeze_blanks"
           "trim_whitespace"
@@ -26,6 +27,7 @@
         nixfmt.command = lib.getExe pkgs.nixfmt-rfc-style;
         fixjson.command = lib.getExe pkgs.fixjson;
         clang_format.command = pkgs.llvmPackages_latest.clang-tools + /bin/clang-format;
+        prettier.command = lib.getExe pkgs.nodePackages_latest.prettier;
       };
     };
   };
